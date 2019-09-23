@@ -1,5 +1,10 @@
 html {
-  font-family: sans-serif;
+  font-family: "Open Sans"
+}
+
+
+/* html {
+  font-family: "Work Sans", "sans-serif";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -619,4 +624,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */
