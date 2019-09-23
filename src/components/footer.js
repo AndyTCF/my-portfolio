@@ -1,18 +1,18 @@
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components";
 // import { spacing, colors } from "../common/variables";
 
 const StyledFooter = styled.footer`
+  height: 100px;
   margin: 0 auto;
-  maxWidth: 960;
-  padding: 0px 1.0875rem 1.45rem;
-  paddingTop: 0;
+  max-width: 1388px;
 `;
 
 const Footer = () => (
   <StyledFooter>
-      Want to work with me?
+      Want to work with me? 
+      <Link to="/contact"> Let's talk.</Link>
   </StyledFooter>
 );
 

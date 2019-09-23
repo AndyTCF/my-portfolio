@@ -7,20 +7,18 @@ import ProfilePic from "../images/favicon.png";
 
 const StyledHeader = styled.header` 
   height: 100px;
+  margin: 0 auto;
+  max-width: 1388px;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  maxWidth: 960;
-  padding: 0px 1.0875rem 1.45rem;
-  paddingTop: 0;
 `;
 const Box = styled.div`
-
 `;
 const StyledLink = styled(Link)`
   color: ${colors.pureBlack};
   text-decoration: none;
+  text-align: center;
   margin: 0 ${spacing.m};
   font-weight: 600;
 `;
