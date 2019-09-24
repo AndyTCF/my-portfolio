@@ -17,7 +17,6 @@ const Box = styled.div`
 `;
 const StyledLink = styled(Link)`
   color: ${colors.pureBlack};
-  text-decoration: none;
   text-align: center;
   margin: 0 ${spacing.m};
   font-weight: 600;
