@@ -1,0 +1,10 @@
+/* Global overrides */
+html {
+  font-family: "Open Sans"
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
