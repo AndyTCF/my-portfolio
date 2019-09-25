@@ -27,9 +27,9 @@ export const RegularText = css`
   font-size: 22px;
   font-weight: 300;
 `;
-export const Subtext = css`
+export const SubText = css`
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 `;
 export const smallScreen = styles => css`
   @media screen and (max-width: 768px) {

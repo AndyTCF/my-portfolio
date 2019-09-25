@@ -1,24 +1,33 @@
 import React from "react"
-// import { Link } from "gatsby"
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import SEO from "../components/seo"
-import { colors, spacing, 
+import { 
+  colors, 
+  spacing, 
   Header,
-  Subtext,
-  SubHeader
+  SubText,
+  SubHeader,
+  smallScreen
  } from "../common/variables";
 import NexlLogo from "../images/nexl-icon.png";
 import HelisLogo from "../images/helis-network-logo.png";
-import eightExShowcase from "../images/eightExShowcase.png";
-import seadeckShowcase from "../images/seadeckShowcase.png";
-import uaShowcase from "../images/uaShowcase.png";
+import eightExShowcase from "../images/eightExShowcase.jpg";
+import seadeckShowcase from "../images/seadeckShowcase.jpg";
+import uaShowcase from "../images/uaShowcase.jpg";
 import { DisplayBox } from "../components/displayBox";
 
 const Hero = styled.div`
-  ${Header};
   padding: ${spacing.xl} 0;
+  width: 90%;
   margin: 0 auto;
-  max-width: 1388px;
+  max-width: 1400px;
+`;
+const HeroTitle = styled.div`
+  ${Header};
+  ${smallScreen(css`
+    font-size: 20px;
+  `)}
+  max-width: 840px;
   & > span {
     color: ${colors.orange};
     font-weight: 300;
@@ -26,62 +35,76 @@ const Hero = styled.div`
 `;
 const SubSection = styled.div`
   display: flex;
-  justify-content: space-between;
   padding: ${spacing.l} 0;
   margin: 0 auto;
-  max-width: 1388px;
+  width: 90%;
+  max-width: 1400px;
 `;
 const LogoContainer = styled.div`
-  ${Subtext};
+  ${SubText};
+  ${smallScreen(css`
+    font-size: 14px;
+  `)}
   color: ${colors.gray};
   display: flex;
+  width: 50%;
   flex-direction: column;
   & > a { 
   }
 `;
 const Logo = styled.img`
-  max-width: 180px;
+  max-width: ${props => props.helis ? "60px" : "170px"};
   padding: ${spacing.m} 0;
+  cursor: pointer;
+  ${smallScreen(css`
+    max-width: ${props => props.helis ? "30px" : "80px"};
+  `)}
 `;
 const Body = styled.div`
   background-color: ${colors.lightGray};
   display: flex;
   flex-wrap: wrap;
   padding: ${spacing.xl};
+  ${smallScreen(css`
+    padding: ${spacing.m};
+  `)}
 `;
 const Text = styled.div`
   ${SubHeader};
   color: ${colors.gray};
   font-weight: 300;
   padding: ${spacing.l};
+  ${smallScreen(css`
+    padding: ${spacing.m};
+    font-size: 18px;
+  `)}
 `;
 const Row = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <Hero>- I’m Andy Tom, a <span>product designer</span> and <span>developer </span>
-     living in Sydney Australia, currently working for <span>NEXL</span>.
+    <Hero>
+      <HeroTitle>
+        - I’m Andy Tom, a <span>product designer</span> and <span>developer </span>
+        living in Sydney Australia, currently working for <span>NEXL</span>.
+      </HeroTitle>
     </Hero>
     <SubSection>
       <LogoContainer>
         Currently
-        <a href="http://www.nexl.io">
-          <Logo src={NexlLogo} alt="Logo of the NEXL company"/>
-        </a>
+          <Logo onClick={() => window.location.href="http://www.nexl.io"} src={NexlLogo} alt="Logo of the NEXL company"/>
       </LogoContainer>
       <LogoContainer>
         Previously
-        <a href="http://www.helis.network">
-          <Logo href="helis.network" src={HelisLogo} alt="Logo of the Helis Network company"/>
-        </a>
+          <Logo helis onClick={() => window.location.href="http://www.helis.network"} src={HelisLogo} alt="Logo of the Helis Network company"/>
       </LogoContainer>
     </SubSection>
     <Body>
-      <Text>Previous Projects</Text>
+      <Text id="WORK">Previous Projects</Text>
       <Row>
         <DisplayBox
           image={eightExShowcase}
@@ -102,6 +125,6 @@ const IndexPage = () => (
       </Row>
     </Body>
   </>
-)
+);
 
 export default IndexPage;

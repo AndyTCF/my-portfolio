@@ -13,6 +13,7 @@
     "gatsby-plugin-offline": "^3.0.8",
     "gatsby-plugin-react-helmet": "^3.1.8",
     "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-smoothscroll": "^1.0.3",
     "gatsby-plugin-styled-components": "^3.1.6",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-transformer-sharp": "^2.2.16",
@@ -20,8 +21,10 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "smooth-scroll": "^16.1.0",
     "styled-components": "^4.4.0",
-    "typeface-open-sans": "0.0.75"
+    "typeface-open-sans": "0.0.75",
+    "typewriter-effect": "^2.12.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
