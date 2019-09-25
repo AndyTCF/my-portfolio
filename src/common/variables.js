@@ -6,7 +6,6 @@ export const colors = {
   gray: "#a4b0be",
   orange: "#ffa502",
   lightGray: "#f1f2f6",
-
 };
 export const spacing = {
   xxs: "2px",
@@ -31,4 +30,14 @@ export const RegularText = css`
 export const Subtext = css`
   font-size: 18px;
   font-weight: 300;
+`;
+export const smallScreen = styles => css`
+  @media screen and (max-width: 768px) {
+    ${styles}
+  }
+`;
+export const largeScreen = styles => css`
+  @media screen and (max-width: 1440px) {
+    ${styles}
+  }
 `;

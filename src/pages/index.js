@@ -1,7 +1,6 @@
 import React from "react"
 // import { Link } from "gatsby"
 import styled from "styled-components";
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { colors, spacing, 
   Header,
@@ -62,7 +61,7 @@ const Row = styled.div`
 `;
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
     <Hero>- I’m Andy Tom, a <span>product designer</span> and <span>developer </span>
      living in Sydney Australia, currently working for <span>NEXL</span>.
@@ -102,7 +101,7 @@ const IndexPage = () => (
         />
       </Row>
     </Body>
-  </Layout>
+  </>
 )
 
-export default IndexPage
+export default IndexPage;

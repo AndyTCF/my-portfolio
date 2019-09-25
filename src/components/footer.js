@@ -12,7 +12,6 @@ const Content = styled.div`
   margin: 0 auto;
   max-width: 1388px;
   padding: ${spacing.xl};
-  
 `;
 const Text = styled.div`
   ${SubHeader}

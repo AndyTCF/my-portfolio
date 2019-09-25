@@ -10,7 +10,6 @@ const Container = styled.a`
   text-align: center;
   transition: all 0.2s ease-in-out; 
   border: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   &:hover {
     transform: scale(1.02);
   }
@@ -35,5 +34,5 @@ export const DisplayBox = ({image, copy, link}) => (
 );
 
 DisplayBox.propTypes = {
-  image: PropTypes.element
+  image: PropTypes.string
 }
