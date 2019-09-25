@@ -18,16 +18,17 @@ import { DisplayBox } from "../components/displayBox";
 
 const Hero = styled.div`
   padding: ${spacing.xl} 0;
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1400px;
+  background: ${props => props.theme.main};
 `;
 const HeroTitle = styled.div`
   ${Header};
   ${smallScreen(css`
     font-size: 20px;
+    margin-left: 32px;
   `)}
+  color: ${props => props.theme.body};
   max-width: 840px;
+  margin-left: 10%;
   & > span {
     color: ${colors.orange};
     font-weight: 300;
@@ -36,21 +37,19 @@ const HeroTitle = styled.div`
 const SubSection = styled.div`
   display: flex;
   padding: ${spacing.l} 0;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1400px;
+  background: ${props => props.theme.main};
 `;
 const LogoContainer = styled.div`
   ${SubText};
   ${smallScreen(css`
     font-size: 14px;
+    margin-left: 32px;
   `)}
   color: ${colors.gray};
   display: flex;
   width: 50%;
   flex-direction: column;
-  & > a { 
-  }
+  margin-left: 10%;
 `;
 const Logo = styled.img`
   max-width: ${props => props.helis ? "60px" : "170px"};
@@ -61,7 +60,7 @@ const Logo = styled.img`
   `)}
 `;
 const Body = styled.div`
-  background-color: ${colors.lightGray};
+  background-color: ${props => props.theme.portfolioBackground};
   display: flex;
   flex-wrap: wrap;
   padding: ${spacing.xl};
