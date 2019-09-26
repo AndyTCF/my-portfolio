@@ -10,6 +10,9 @@ import {
 
 const Container = styled.a`
   background: ${colors.pureWhite};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 45%;
   margin: ${spacing.m};
   text-align: center;
@@ -18,6 +21,9 @@ const Container = styled.a`
   &:hover {
     transform: scale(1.02);
   }
+  ${smallScreen(css`
+    width: 50%;
+  `)}
 `;
 const Image = styled.img`
   width: 100%;
@@ -25,10 +31,11 @@ const Image = styled.img`
 const Text = styled.div`
   background: ${colors.pureWhite};
   ${RegularText}
-  padding: ${spacing.l} 0;
+  padding: ${spacing.m} 0;
   color: ${colors.pureBlack};
+  text-align: center;
   ${smallScreen(css`
-    font-size: 14px;
+    font-size: 12px;
   `)}
 `;
 

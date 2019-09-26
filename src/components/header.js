@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components";
-import { spacing, SubText } from "../common/variables";
+import { spacing, SubText, Page } from "../common/variables";
 import ProfilePic from "../images/favicon.png";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import Toggle from 'react-styled-toggle';
@@ -11,13 +11,11 @@ const StyledHeader = styled.header`
   background: ${props => props.theme.main};
 `;
 const Content = styled.div`
+  ${Page};
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1400px;
 `;
 const Container = styled.div`
   display: flex;
@@ -48,7 +46,7 @@ export default class Header extends React.Component {
           <Container>
             <StyledLink onClick={() => scrollTo('#WORK')}>Work</StyledLink>
             <StyledLink onClick={() => scrollTo('#CONTACT')}>Contact</StyledLink>
-            <Toggle checked={false} onChange={this.toggleSwitch}/>
+            {/* <Toggle checked={false} onChange={this.toggleSwitch}/> */}
           </Container>
         </Content>
       </StyledHeader>

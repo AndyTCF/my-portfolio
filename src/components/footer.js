@@ -5,6 +5,8 @@ import {
   colors, 
   SubHeader, 
   RegularText,
+  SubTitle,
+  Page,
   smallScreen
 } from "../common/variables";
 
@@ -12,43 +14,50 @@ const StyledFooter = styled.footer`
   background: ${props => props.theme.main}
 `;
 const Content = styled.div`
-  padding: ${spacing.xl};
-  max-width: 840px;
-  ${smallScreen(css`
-    padding: ${spacing.l};
-  `)}
+  ${Page};
+  padding: ${spacing.l};
 `;
 const Text = styled.div`
   ${SubHeader}
   color: ${props => props.theme.body};
+  padding: ${spacing.m} 0;
   ${smallScreen(css`
-    font-size: 20px;
-  `)};
+    font-size: 22px;
+    text-align: center;
+  `)}
   & > a {
     color: ${colors.orange};
-    font-weight: 600;
   }
 `;
 const Container = styled.div`
-  padding: ${spacing.m} 0;
+  padding: ${spacing.s} 0;
   display: flex;
   align-items: center;
   ${smallScreen(css`
     flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
   `)}
 `;
 const Links = styled.a`
   ${RegularText}
-  align-items: center;
-  display: flex;
   width: 150px;
   cursor: pointer;
   color: ${props => props.theme.body};
+  margin: ${spacing.xs} 0;
   ${smallScreen(css`
     font-size: 14px;
-    width: 50%;
   `)}
 `;
+const SubText = styled.div`
+  padding: ${spacing.m} 0;
+  text-align: center;
+  ${SubTitle};
+  color: ${props => props.theme.body};
+  ${smallScreen(css`
+    font-size: 10px;
+  `)}
+`
 
 const Footer = () => (
   <StyledFooter id="CONTACT">
@@ -68,6 +77,7 @@ const Footer = () => (
           Linkedin
         </Links>
       </Container>
+      <SubText>© Andy Tom. Made with gatsby and love (find the src code in my github).</SubText>
     </Content>
   </StyledFooter>
 );

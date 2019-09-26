@@ -17,22 +17,22 @@ import uaShowcase from "../images/uaShowcase.jpg";
 import { DisplayBox } from "../components/displayBox";
 
 const Hero = styled.div`
-  padding: ${spacing.xl} 0;
   background: ${props => props.theme.main};
 `;
 const HeroTitle = styled.div`
   ${Header};
-  ${smallScreen(css`
-    font-size: 20px;
-    margin-left: 32px;
-  `)}
+  padding: ${spacing.xl} 0;
   color: ${props => props.theme.body};
   max-width: 840px;
-  margin-left: 10%;
+  margin: 0 10%;
   & > span {
     color: ${colors.orange};
     font-weight: 300;
   }
+  ${smallScreen(css`
+    font-size: 26px;
+    margin-left: 5%;
+`)}
 `;
 const SubSection = styled.div`
   display: flex;
@@ -107,7 +107,7 @@ const IndexPage = () => (
       <Row>
         <DisplayBox
           image={eightExShowcase}
-          copy="8xProtocol Payment Solutions (Now Helis Network)"
+          copy="8x Protocol"
         />
         <DisplayBox
           image={seadeckShowcase}

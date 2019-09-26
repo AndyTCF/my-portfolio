@@ -31,6 +31,19 @@ export const SubText = css`
   font-size: 18px;
   font-weight: 400;
 `;
+export const SubTitle = css`
+  font-size: 14px;
+  font-weight: 400;
+`;
+export const Page = css`
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: ${spacing.m};
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
+`;
 export const smallScreen = styles => css`
   @media screen and (max-width: 768px) {
     ${styles}
