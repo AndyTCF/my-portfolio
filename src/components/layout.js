@@ -11,6 +11,7 @@ import "../common/layout.css";
 import Footer from "./footer";
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from "../common/themes";
+import "typeface-open-sans";
 
 // const defaultContextData = {
 //   dark: false,
