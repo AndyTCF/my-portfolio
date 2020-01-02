@@ -1,10 +1,7 @@
 import React from "react"
 import styled from "styled-components";
-import { spacing, SubText, Page } from "../common/variables";
-import ProfilePic from "../images/favicon.png";
+import { spacing, SubText, Page, colors } from "../common/variables";
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import Toggle from 'react-styled-toggle';
-// import { useTheme } from "./layout";
 
 const StyledHeader = styled.header` 
   height: 100px;
@@ -23,30 +20,28 @@ const Container = styled.div`
 const StyledLink = styled.div`
   ${SubText};
   color: ${props => props.theme.body};
+  font-weight: ${props => props.bold ? 600 : 400};
   text-align: center;
   margin: 0 ${spacing.m};
   cursor: pointer;
-`;
-const Image = styled.img`
-  width: 50px;
+  transition: all 0.2s;
+
+  :hover {
+    color: ${colors.purple};
+  }
 `;
 
-// const themeState = useTheme();
 export default class Header extends React.Component {
-  toggleSwitch = () => {
-    // themeState.toggle();
-  }
   render() {
     return (
       <StyledHeader>
         <Content>
           <StyledLink to="/" >
-            <Image src={ProfilePic} alt="Andy Tom's profile display"/>
+            <StyledLink bold>Andy Tom</StyledLink>
           </StyledLink>
           <Container>
             <StyledLink onClick={() => scrollTo('#WORK')}>Work</StyledLink>
             <StyledLink onClick={() => scrollTo('#CONTACT')}>Contact</StyledLink>
-            {/* <Toggle checked={false} onChange={this.toggleSwitch}/> */}
           </Container>
         </Content>
       </StyledHeader>

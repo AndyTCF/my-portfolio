@@ -11,7 +11,7 @@ import {
 } from "../common/variables";
 
 const StyledFooter = styled.footer`
-  background: ${props => props.theme.main}
+  background: ${props => props.theme.main};
 `;
 const Content = styled.div`
   ${Page};
@@ -26,7 +26,7 @@ const Text = styled.div`
     text-align: center;
   `)}
   & > a {
-    color: ${colors.orange};
+    color: ${colors.purple};
   }
 `;
 const Container = styled.div`
@@ -34,9 +34,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   ${smallScreen(css`
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: ${spacing.m};
   `)}
 `;
 const Links = styled.a`
@@ -46,8 +46,13 @@ const Links = styled.a`
   color: ${props => props.theme.body};
   margin: ${spacing.xs} 0;
   ${smallScreen(css`
-    font-size: 14px;
+    font-size: 16px;
+    text-align: left;
   `)}
+  transition: all 0.2s;
+  :hover {
+    color: ${colors.purple};
+  }
 `;
 const SubText = styled.div`
   padding: ${spacing.m} 0;
@@ -57,23 +62,23 @@ const SubText = styled.div`
   ${smallScreen(css`
     font-size: 10px;
   `)}
-`
+`;
 
 const Footer = () => (
   <StyledFooter id="CONTACT">
     <Content>
       <Text>Want to work with me?  <a href="mailto:andyteechenfang@gmail.com"> Let's Talk.</a>  </Text>
       <Container>
-        <Links href="http://medium.com/AndyTCF">
+        <Links target="blank"  href="http://github.com/AndyTCF">
           Github
         </Links>
-        <Links href="http://twitter.com/vndicrypto">
+        <Links target="blank" href="http://twitter.com/vndicrypto">
           Twitter
         </Links>
-        <Links href="http://medium.com/@andycf">
+        <Links target="blank" href="http://medium.com/@andycf">
           Medium
         </Links>
-        <Links href="https://www.linkedin.com/in/andy-chen-fang/">
+        <Links target="blank" href="https://www.linkedin.com/in/andy-chen-fang/">
           Linkedin
         </Links>
       </Container>
